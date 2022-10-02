@@ -31,7 +31,7 @@ h1{
     color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
 }
-h5{
+h3{
     color: var(--primary-color);
     font-family: 'Poppins', sans-serif;
     line-height: 1.6rem;
@@ -198,6 +198,31 @@ body{
 }
 #skills .s-bars .progress .progress-bar{
     background: var(--main-color);
+}
+#skills .h-r-text{
+    width: 18rem;
+    margin-left: -2rem;
+    padding-top: 7rem;
+    padding-left: 50px;
+    color: #ffff;
+}
+#skills .h-r-text a{
+    font-weight: bold;
+    margin-right: 5px;
+    color: #ffff;
+}
+#skills .h-l-text .line{
+    margin-top: 10px;
+    height: 7px;
+    width: 46px;
+    background: var(--main-color);
+    border-radius: 25px;
+   
+}
+#skills .h-l-text .f-icons li a i{
+    color: var(--primary-color);
+    font-size: 23px;
+    color: #ffff;
 }
 /* ------ not end of skills section ------- */
 

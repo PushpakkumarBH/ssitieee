@@ -8,7 +8,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://pushpak696:hittalkeri@cluster1.mictlsi.mongodb.net/?retryWrites=true&w=majority/IeeeDB");
+mongoose.connect("mongodb+srv://admin-lakshmi:Lakshmi%40262001@cluster0.lsq384e.mongodb.net/IeeeDB");
+
 // mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get('/', function(req, res){
@@ -50,6 +51,6 @@ app.post("/ieeeregister", function(req, res){
     });
 });
 
-app.listen(process.env.PORT || 3000,function(){
+app.listen(process.env.PORT || 3000, function(){
     console.log('Server is running at port 3000');
 });

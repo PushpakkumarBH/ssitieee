@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost:27017/IeeeDB");
+mongoose.connect("mongodb+srv://psuhpak696:hittalkeri@cluster0.hsylox1.mongodb.net/IeeeDB");
 
 app.get('/', function(req, res){
     res.render('home');

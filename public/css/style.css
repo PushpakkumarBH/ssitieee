@@ -14,9 +14,9 @@ primary:- #ec6036
 */
 /* ----------- global css ------------ */
 :root{
-    --bg-primary: #343536;
-    --bg-secondary: #355764;
-    --main-color: #607EAA;
+    --bg-primary: #810000;
+    --bg-secondary: #810000;
+    --main-color: #F7F6DC;
     --primary-color: #ffff;
     --secondary-color: #ffff;
 }
@@ -239,7 +239,7 @@ body{
     cursor: pointer;
     color: var(--primary-color);
     background-color: var(--bg-primary);
-    box-shadow: 0 10px 20px red;
+    box-shadow: 0 10px 20px #BE0000;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -667,8 +667,8 @@ footer div h5 span{
 @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
 
 .area{
-    background: #B7C4CF;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    background: #151515;  
+    background: -webkit-linear-gradient(to left, #8f94fb, 151515);  
     width: 100%;
     height:100vh;
 }
@@ -786,4 +786,11 @@ footer div h5 span{
         border-radius: 50%;
     }
 
+}
+#ahref {
+    color: #ffff;
+}
+
+#foot{
+    color: #ffff;
 }

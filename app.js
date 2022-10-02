@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://admin-lakshmi:Lakshmi%40262001@cluster0.lsq384e.mongodb.net/IeeeDB");
+mongoose.connect("mongodb+srv://username:<password>@cluster0.lsq384e.mongodb.net/IeeeDB");
 
 // mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 

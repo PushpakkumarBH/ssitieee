@@ -7,8 +7,46 @@ app.set('view engine', 'ejs' );
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+
+mongoose.connect("mongodb://localhost:27017/IeeeDB");
+
 app.get('/', function(req, res){
     res.render('home');
+});
+
+
+const participantSchema = new mongoose.Schema ({
+    name: String,
+    institutename: String,
+    contactnum: Number,
+    email: String,
+    event: String
+});
+
+const Participant = mongoose.model("Participant", participantSchema);
+
+app.get('/ieeeregister', function(req, res){
+    res.render('ieeeregister');
+});
+
+
+
+app.post("/ieeeregister", function(req, res){
+    const newParticipant = new Participant({
+        name: req.body.name,
+        institutename: req.body.institutename,
+        contact: req.body.contactnum,
+        email: req.body.email,
+        event: req.body.event
+
+    });
+    newParticipant.save(function(err){
+        if(err){
+            console.log(err);
+        } else {
+            res.redirect('/');
+        }
+    });
 });
 
 app.listen(3000,function(){

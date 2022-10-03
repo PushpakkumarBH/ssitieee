@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 require('dotenv').config()
 
-// mongoose.connect("mongodb+srv://pushpak696:"+process.env.MONGODB_PWD+"@cluster1.mictlsi.mongodb.net/IeeeDB");
+mongoose.connect("mongodb+srv://pushpak696:S8H4zXQ8eq01ah1X@cluster1.mictlsi.mongodb.net/IeeeDB");
 
-mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get('/', function(req, res){
     res.render('home');
@@ -34,8 +34,8 @@ const Participant = mongoose.model("Participant", participantSchema);
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'bahubalish1974@gmail.com',
-      pass: process.env.NODEM_PWD 
+      user: 'ieeesbssit@gmail.com',
+      pass: 'krnfadcvyaudprjl' 
     }
   });
 // point to the template folder
@@ -77,7 +77,7 @@ app.post("/ieeeregister", function(req, res){
             email: req.body.email,
             event: req.body.event
         },
-        attachments: [{ filename: "pic-1.jpeg", path: "./attachments/pic-1.jpeg" }]
+        attachments: [{ filename: "logo.png", path: "./attachments/logo.png" }]
       };
     newParticipant.save(function(err){
         if(err){

@@ -8,9 +8,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://pushpak696:S8H4zXQ8eq01ah1X@cluster1.mictlsi.mongodb.net/IeeeDB");
+// mongoose.connect("mongodb+srv://<Username>:<Password>@cluster1.mictlsi.mongodb.net/IeeeDB");
 
-// mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get('/', function(req, res){
     res.render('home');

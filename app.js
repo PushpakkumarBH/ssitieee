@@ -34,8 +34,8 @@ const Participant = mongoose.model("Participant", participantSchema);
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'bahubalish1974@gmail.com',
-      pass: process.env.NODEM_PWD 
+      user: 'ieeesbssit@gmail.com',
+      pass: 'krnfadcvyaudprjl' 
     }
   });
 // point to the template folder
@@ -77,7 +77,7 @@ app.post("/ieeeregister", function(req, res){
             email: req.body.email,
             event: req.body.event
         },
-        attachments: [{ filename: "pic-1.jpeg", path: "./attachments/pic-1.jpeg" }]
+        attachments: [{ filename: "logo.png", path: "./attachments/logo.png" }]
       };
     newParticipant.save(function(err){
         if(err){

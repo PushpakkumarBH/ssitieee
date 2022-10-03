@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb+srv://username:<password>@cluster0.lsq384e.mongodb.net/IeeeDB");
+mongoose.connect("mongodb+srv://pushpak696:S8H4zXQ8eq01ah1X@cluster1.mictlsi.mongodb.net/IeeeDB");
 
 // mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
@@ -37,7 +37,7 @@ app.post("/ieeeregister", function(req, res){
     const newParticipant = new Participant({
         name: req.body.name,
         institutename: req.body.institutename,
-        contact: req.body.contactnum,
+        contactnum: req.body.contactnum,
         email: req.body.email,
         event: req.body.event
 

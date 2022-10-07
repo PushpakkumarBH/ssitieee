@@ -46,10 +46,10 @@ body {
 }
 
 
-	a:hover,
-	a.selected {
-		color: #ffcc00;
-	}
+a:hover,
+a.selected {
+	color: #ffcc00;
+}
 
 h1,h2,h4,h5,h6 {
 	text-align: center;
@@ -86,7 +86,7 @@ float: left;
 	list-style: none;
 	width: 100px;
 	height: 100px;
-	line-height: 100px;
+	/* line-height: 100px; */
 	font-size: 24px;
 	padding-left: 10px;
 	background: url('http://www.csslab.cl/ejemplos/timelinr/latest/images/biggerdot.png') left center no-repeat;

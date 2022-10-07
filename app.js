@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 require('dotenv').config()
 
-mongoose.connect("mongodb+srv://pushpak696:S8H4zXQ8eq01ah1X@cluster1.mictlsi.mongodb.net/IeeeDB");
+// mongoose.connect("mongodb+srv://pushpak696:"+process.env.MONGODB_PWD+"@cluster1.mictlsi.mongodb.net/IeeeDB");
 
-// mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get('/', function(req, res){
     res.render('home');
@@ -35,7 +35,7 @@ var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: 'ieeesbssit@gmail.com',
-      pass: 'krnfadcvyaudprjl' 
+      pass: process.env.NODEM_PWD 
     }
   });
 // point to the template folder
@@ -54,7 +54,9 @@ app.get('/ieeeregister', function(req, res){
     res.render('ieeeregister');
 });
 
-
+app.get('/roadmap', function(req, res){
+  res.render('roadmap');
+});
 
 app.post("/ieeeregister", function(req, res){
     const newParticipant = new Participant({

@@ -54,8 +54,8 @@ app.get('/ieeeregister', function(req, res){
     res.render('ieeeregister');
 });
 
-app.get('/roadmap', function(req, res){
-  res.render('roadmap');
+app.get('/timeline', function(req, res){
+  res.render('timeline');
 });
 
 app.post("/ieeeregister", function(req, res){

@@ -92,8 +92,8 @@ float: left;
 	-ms-transform: scale(1.1,1.1);
 	transform: scale(1.1,1.1);
 	padding-top: 50px;
-	height: 270px;
-	width: 250px
+	/* height: 270px; */
+	/* width: 250px */
 }
 #issues li img {
 float: left;

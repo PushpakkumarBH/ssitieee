@@ -13,7 +13,7 @@ require('dotenv').config()
 
 // mongoose.connect("mongodb+srv://pushpak696:"+process.env.MONGODB_PWD+"@cluster1.mictlsi.mongodb.net/IeeeDB");
 
-// mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
+ mongoose.connect("mongodb://localhost:27017/IeeeDB", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.get('/', function(req, res){
     res.render('home');

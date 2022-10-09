@@ -68,7 +68,7 @@ app.post("/ieeeregister", function(req, res){
 
     });
     var mailOptions = {
-        from: 'bahubalish1974@gmail.com',
+        from: 'ieeesbssit@gmail.com',
         to: req.body.email,
         subject: 'Sucessfully Registered',
         template: 'email',

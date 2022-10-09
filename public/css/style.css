@@ -175,7 +175,12 @@ body{
     padding: 10px;
     border: none;
 }
-
+#home img{
+    align-self: flex-end;
+    max-width: 30rem;
+    margin-left: -20%;
+    filter: drop-shadow(-20px -10px 40px black);
+}
 
 /* ------ home section end ------- */
 

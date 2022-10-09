@@ -170,6 +170,11 @@ body{
     text-decoration: underline;
     color: #ffff;
 }
+#home .button{
+    background-color: #810000;
+    padding: 10px;
+    border: none;
+}
 
 
 /* ------ home section end ------- */

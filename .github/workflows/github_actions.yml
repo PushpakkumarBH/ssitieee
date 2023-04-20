@@ -1,0 +1,24 @@
+name: Actions to be taken
+
+on: 
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  test:
+    name: Running Unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: install node packages
+        run: npm install
+      - name: running the node application
+        run: node app.js
+        env: 
+          CI: true

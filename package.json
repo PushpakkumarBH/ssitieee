@@ -4,15 +4,22 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --require @babel/register"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.4",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/register": "^7.21.0",
     "body-parser": "^1.20.0",
+    "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "mocha": "^10.2.0",
     "mongoose": "^6.6.3",
     "nodemailer": "^6.8.0",
     "nodemailer-express-handlebars": "^5.0.0"

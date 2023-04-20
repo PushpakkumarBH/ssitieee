@@ -18,7 +18,7 @@ jobs:
           node-version: 16
       - name: install node packages
         run: npm install
-      - name: running the node application
-        run: node app.js
+      - name: checking the status of the application
+        run: npm test
         env: 
           CI: true
